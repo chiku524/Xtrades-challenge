@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../css/modal.css';
 
 //mui components
@@ -187,7 +187,7 @@ const MyModal = ({item, open, onClose, otherAlerts, chart}) => {
                                 <textarea className='text-area' placeholder="Write your message here..."></textarea>
                                 <span className='emoji'><InsertEmoticonIcon /></span>
                                 <span className='attachment'><AttachFileIcon /></span>
-                                <img className='profile-pic' src={item.picture} />
+                                <img className='profile-pic' src={item.picture} alt='profile pic' />
                             </div>
                         </div>
                     </div>

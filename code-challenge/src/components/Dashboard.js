@@ -24,7 +24,7 @@ import MenuList from '@material-ui/core/MenuList';
 import MyModal from '../components/Modal';
 
 //scroll package for the trending tickers
-import { useScrollBoost, ScrollBoost } from 'react-scrollbooster';
+import { ScrollBoost } from 'react-scrollbooster';
 
 //company logos, profile photos and charts
 import appleLogo from '../images/Apple_Logo.png';
@@ -35,14 +35,13 @@ import amazonLogo from '../images/Amazon-Logo.png';
 import piano from '../images/piano-pic.jpg';
 
 const Dashboard = () => {
-    const [searchQuery, setSearchQuery] = useState('');                             //used to make an api call to search for data
     const [filter, setFilter] = useState('Today');
     const [alertsFilter, setAlertsFilter] = useState('All');
     const [rotateExpandIconTickers, setRotateExpandIconTickers] = useState(false);
     const [rotateExpandIconAlerts, setRotateExpandIconAlerts] = useState(false);
     const [openFilterMenu, setOpenFilterMenu] = useState(false);
     const [openAlertsMenu, setOpenAlertsMenu] = useState(false);
-    const [trendingTickers, setTrendingTickers] = useState(
+    const [trendingTickers] = useState(
         [
             {symbol: 'AAPL', company: 'Apple Inc.', logo: appleLogo, alertsCount: 15, bullish: 64, bearish: 36, chart: appleChart},
             {symbol: 'TSLA', company: 'Tesla, Inc.', logo: teslaLogo, alertsCount: 12, bullish: 55, bearish: 45, chart: appleChart},
@@ -54,7 +53,7 @@ const Dashboard = () => {
             {symbol: 'AMZN', company: 'amazon.com', logo: amazonLogo, alertsCount: 17, bullish: 55, bearish: 45, chart: appleChart}
         ]
     );
-    const [recentAlerts, setRecentAlerts] = useState(
+    const [recentAlerts] = useState(
         [
             {picture: piano, rank: 57, username: 'CKadera', handle: '@ckadera', tradeLogo: appleLogo, action: 'Bought AAPL shares', price: 210.22, strategies: ['Momentum', 'Lotto', 'Day', 'Vertical Spread'], open: '2/2/2021', close: '4:22 PM', profit: 5, actions: {likes: 5, bookmarks: 10, comments: 37}},
             {picture: piano, rank: 57, username: 'CKadera', handle: '@ckadera', tradeLogo: appleLogo, action: 'Bought AAPL shares', price: 210.22, strategies: ['Momentum', 'Lotto', 'Day', 'Vertical Spread'], open: '2/2/2021', close: '1:25 AM', profit: 5, actions: {likes: 5, bookmarks: 10, comments: 37}},
@@ -69,7 +68,7 @@ const Dashboard = () => {
 
         ]
     );
-    const [showModalDefault, setShowModalDefault] = useState([false, false, false, false, false, false, false, false, false, false]);
+    const [showModalDefault] = useState([false, false, false, false, false, false, false, false, false, false]);
     const [showModal, setShowModal] = useState(false);
     const tickersAnchorRef = useRef(null);
     const alertsAnchorRef = useRef(null);
@@ -276,7 +275,7 @@ const Dashboard = () => {
                                 <div className='username'>{item.username}</div>
                                 <div className='handle'>{item.handle}</div>
                             </div>
-                            <div className='trade-logo'><img className='logo' src={item.tradeLogo} /></div>
+                            <div className='trade-logo'><img className='logo' src={item.tradeLogo} alt='stock logo' /></div>
                             <div className='trade-details'>
                                 <div className='action'>{item.action}</div>
                                 <div className='price'>@ {item.price}</div>

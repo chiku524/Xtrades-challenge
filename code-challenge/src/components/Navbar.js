@@ -9,12 +9,10 @@ import CollapsedLogo from '../images/logo-white.png';
 import '../css/navbar.css';
 
 const Navbar = () => {
-    const [isMember, setIsMember] = useState(false);              //can always grab this from your database to check if user is a member
-    const [alertsNumber, setAlertsNumber] = useState(32);         //same as above, can grab this from the back end to display correct number of unread alerts
+    const [alertsNumber] = useState(32);
     const [collapsed, setCollapsed] = useContext(CollapsedContext);
 
     const collapse = () => {
-        // setIsCollapsed(!isCollapsed);
         setCollapsed(!collapsed);
     }
 
