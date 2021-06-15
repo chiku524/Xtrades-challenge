@@ -286,7 +286,7 @@ const Dashboard = () => {
                                     <span>{strat}</span>
                                 </div>
                                 )}
-                                <div><span>+`{item.strategies.length - 2}</span></div>
+                                <div><span>+ {item.strategies.length - 2}</span></div>
                             </div>
                             <div className='open-close'>
                                 <div className='open'><span>Opened {item.open}</span></div>
@@ -302,7 +302,7 @@ const Dashboard = () => {
                                 <span><BookmarkIcon /> {item.actions.bookmarks}</span>
                                 <span><QuestionAnswerIcon /> &nbsp; {item.actions.comments}</span>
                             </div>
-                            <MyModal item={item} open={showModal[index]} onClose={closeModal} otherAlerts={recentAlerts.filter(alert => alert.username === item.username).slice(0, 3)} chart={trendingTickers[0].chart} />
+                            <MyModal item={item} open={showModal[index]} onClose={() => closeModal()} otherAlerts={recentAlerts.filter(alert => alert.username === item.username).slice(0, 3)} chart={trendingTickers[0].chart} />
                         </div>
                     )}
                 </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/modal.css';
 
 //mui components
@@ -13,6 +13,7 @@ import BookmarkIcon from '@material-ui/icons/Bookmark';
 import QuestionAnswerIcon from '@material-ui/icons/QuestionAnswer';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
+import CloseIcon from '@material-ui/icons/Close';
 
 const MyModal = ({item, open, onClose, otherAlerts, chart}) => {
 
@@ -20,6 +21,7 @@ const MyModal = ({item, open, onClose, otherAlerts, chart}) => {
         <Modal open={open} onClose={onClose} BackdropComponent={Backdrop} BackdropProps={{timeout: 500}} closeAfterTransition >
             <Fade in={open}>
                 <div className='modal-container'>
+                    <div className='close-button' onClick={onClose}><CloseIcon /></div>
                     <div className='header'>
                         <div className='user-details'>
                             <div className='responsive-pic'>
@@ -188,6 +190,7 @@ const MyModal = ({item, open, onClose, otherAlerts, chart}) => {
                                 <span className='emoji'><InsertEmoticonIcon /></span>
                                 <span className='attachment'><AttachFileIcon /></span>
                                 <img className='profile-pic' src={item.picture} alt='profile pic' />
+                                <div className='send-button'><span>Send</span></div>
                             </div>
                         </div>
                     </div>
