@@ -1,0 +1,415 @@
+.modal-container {
+  width: 75%;
+  height: 90%;
+  margin: 2% auto;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+.modal-container .header {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.modal-container .header .user-details {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+}
+.modal-container .header .user-details .username-handle {
+  margin-left: 4%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.modal-container .header .user-details .username-handle .username {
+  font-weight: bold;
+  color: black;
+}
+.modal-container .header .user-details .follow-button {
+  margin-left: 25%;
+  width: 20%;
+  height: 35%;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(144, 186, 250, 0.3);
+  color: rgba(41, 119, 223, 0.89);
+  font-size: 16px;
+  text-shadow: 0px 0px 1px grey;
+}
+.modal-container .header .user-details .follow-button span {
+  margin-bottom: 3px;
+}
+.modal-container .header .trade-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  border-bottom: 1px solid #e2e2e2;
+}
+.modal-container .header .trade-details img {
+  width: 80px;
+  height: 60px;
+  border-radius: 10px;
+  margin-left: 2%;
+}
+.modal-container .header .trade-details .trade-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 14px;
+  color: #5c5959;
+}
+.modal-container .header .trade-details .trade-result .action {
+  font-weight: bold;
+}
+.modal-container .header .trade-details .time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 14%;
+}
+.modal-container .header .trade-details .profit {
+  margin-left: 6%;
+  background-color: rgba(46, 212, 41, 0.3);
+  color: rgba(17, 114, 13, 0.7);
+  width: 80px;
+  padding: 7px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+.modal-container .header .trade-details .loss {
+  margin-left: 6%;
+  background-color: rgba(255, 0, 0, 0.63);
+  color: #970909;
+  width: 80px;
+  padding: 7px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+.modal-container .header .trade-details .actions {
+  margin-left: 6%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.modal-container .header .trade-details .actions span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10%;
+}
+.modal-container .header .trade-details .tip-button {
+  margin-left: 9%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(71, 146, 231, 0.774);
+  color: white;
+  padding: 5px 7px 5px 3px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+.modal-container .bottom-section {
+  display: flex;
+  flex-direction: row;
+  height: 85%;
+}
+.modal-container .bottom-section .left-side-section {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e2e2e2;
+  background-color: rgba(209, 209, 209, 0.212);
+}
+.modal-container .bottom-section .left-side-section .trader-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 18%;
+  padding-left: 5%;
+  margin-top: 7%;
+  border-bottom: 1px solid #e2e2e2;
+}
+.modal-container .bottom-section .left-side-section .trader-stats .title {
+  font-weight: bold;
+  width: 100%;
+  margin-bottom: 5%;
+}
+.modal-container .bottom-section .left-side-section .trader-stats .stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 15px;
+}
+.modal-container .bottom-section .left-side-section .trader-stats .stats .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 0 8% 0 0;
+}
+.modal-container .bottom-section .left-side-section .trader-stats .stats .number {
+  font-weight: bold;
+}
+.modal-container .bottom-section .left-side-section .trader-stats .stats .title {
+  color: rgba(124, 122, 122, 0.664);
+  font-weight: normal;
+}
+.modal-container .bottom-section .left-side-section .trader-strategies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 2% 0 3% 5%;
+}
+.modal-container .bottom-section .left-side-section .trader-strategies .title {
+  width: 100%;
+  font-weight: bold;
+  margin: 3% 0;
+}
+.modal-container .bottom-section .left-side-section .trader-strategies span {
+  background-color: #e4e1e1;
+  color: #b9b9b9;
+  padding: 3%;
+  border-radius: 10px;
+  margin: 2% 4% 2% 0;
+  font-size: 14px;
+}
+.modal-container .bottom-section .left-side-section .other-alerts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5%;
+  height: 60%;
+}
+.modal-container .bottom-section .left-side-section .other-alerts .title {
+  margin-right: 50%;
+  margin-bottom: 3%;
+  font-weight: bold;
+}
+.modal-container .bottom-section .left-side-section .other-alerts .alert-card {
+  background-color: #e4e1e1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3%;
+  border-radius: 10px;
+  width: 90%;
+  height: 20%;
+}
+.modal-container .bottom-section .left-side-section .other-alerts .alert-card img {
+  width: 65px;
+  height: 40px;
+  border-radius: 10px;
+}
+.modal-container .bottom-section .left-side-section .other-alerts .alert-card .trade-details {
+  display: flex;
+  flex-direction: column;
+}
+.modal-container .bottom-section .left-side-section .other-alerts .alert-card .trade-details .action {
+  font-size: 14px;
+  font-weight: bold;
+}
+.modal-container .bottom-section .left-side-section .other-alerts .alert-card .trade-details .price {
+  font-size: 14px;
+}
+.modal-container .bottom-section .left-side-section .other-alerts .alert-card .open-date {
+  margin-left: 22%;
+  margin-bottom: 6%;
+  font-size: 12px;
+}
+.modal-container .bottom-section .right-section {
+  width: 70%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  padding: 3% 0;
+  overflow-y: auto;
+  overflow-x: none;
+  position: relative;
+}
+.modal-container .bottom-section .right-section .title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 3%;
+}
+.modal-container .bottom-section .right-section .strategies {
+  display: flex;
+  flex-direction: row;
+  padding-left: 3%;
+}
+.modal-container .bottom-section .right-section .strategies .strategy {
+  background-color: #e4e1e1;
+  color: #b9b9b9;
+  padding: 1%;
+  border-radius: 10px;
+  margin: 2% 1% 2% 0;
+  font-size: 14px;
+}
+.modal-container .bottom-section .right-section .writing-content {
+  margin-top: 2%;
+  padding-left: 3%;
+}
+.modal-container .bottom-section .right-section .writing-content p {
+  margin: 0 5% 3% 0;
+  color: rgba(2, 20, 59, 0.692);
+  text-align: justify;
+}
+.modal-container .bottom-section .right-section img {
+  width: 90%;
+  height: 50%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.modal-container .bottom-section .right-section .comments-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 95%;
+  min-height: 60%;
+}
+.modal-container .bottom-section .right-section .comments-section .breakpoint {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 5% 0 2%;
+  padding: 0 2%;
+}
+.modal-container .bottom-section .right-section .comments-section .breakpoint .line {
+  width: 40%;
+  height: 0px;
+}
+.modal-container .bottom-section .right-section .comments-section .comment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1% 0;
+  width: 100%;
+  height: 70px;
+  padding: 10px 0 10px 0;
+}
+.modal-container .bottom-section .right-section .comments-section .comment .responsive-pic {
+  margin-left: 3%;
+}
+.modal-container .bottom-section .right-section .comments-section .comment .content {
+  margin-left: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.modal-container .bottom-section .right-section .comments-section .comment .content .username-date {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+.modal-container .bottom-section .right-section .comments-section .comment .content .username-date .username {
+  font-weight: bold;
+}
+.modal-container .bottom-section .right-section .comments-section .comment .content .username-date .date {
+  margin-left: 15%;
+}
+.modal-container .bottom-section .right-section .comments-section .comment .content .writing p {
+  margin: 0;
+  padding: 0;
+  height: 35px;
+}
+.modal-container .bottom-section .right-section .comments-section .comment .content .writing p:hover {
+  background: none;
+}
+.modal-container .bottom-section .right-section .comments-section .comment:hover {
+  background-color: rgba(153, 187, 226, 0.192);
+  cursor: pointer;
+}
+.modal-container .bottom-section .right-section .message-box-placeholder {
+  min-width: 95%;
+  min-height: 200px;
+  border: red;
+}
+.modal-container .bottom-section .right-section .message-box {
+  position: sticky;
+  bottom: -40px;
+  left: 20px;
+  border-radius: 10px;
+  width: 95%;
+}
+.modal-container .bottom-section .right-section .message-box .text-area {
+  width: 100%;
+  height: 200px;
+  background-color: #f5f8fb;
+  border-radius: 10px;
+}
+.modal-container .bottom-section .right-section .message-box .text-area::placeholder {
+  padding-left: 90px;
+  padding-top: 20px;
+}
+.modal-container .bottom-section .right-section .message-box .emoji {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: #949494;
+}
+.modal-container .bottom-section .right-section .message-box .attachment {
+  position: absolute;
+  bottom: 15px;
+  left: 45px;
+  color: #949494;
+}
+.modal-container .bottom-section .right-section .message-box .profile-pic {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+}
+.responsive-pic {
+  margin-left: 8%;
+}
+.responsive-pic .picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ececec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px grey;
+}
+.responsive-pic .picture .profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.right-section::-webkit-scrollbar {
+  background: none;
+  width: 10px;
+  border-radius: 15px;
+}
+.right-section::-webkit-scrollbar-button {
+  display: none;
+  border-radius: 15px;
+}
+.right-section::-webkit-scrollbar-track {
+  background-color: lightgrey;
+  border-radius: 15px;
+}
+.right-section::-webkit-scrollbar-track-piece {
+  color: lightgrey;
+  border-radius: 15px;
+}
+.right-section::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 15px;
+}

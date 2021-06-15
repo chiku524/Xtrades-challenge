@@ -1,0 +1,150 @@
+.navbar-container {
+  margin: 0;
+  width: 15%;
+  height: 100%;
+  background-color: #154080;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+  position: relative;
+}
+.navbar-container .logo {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  max-width: 200px;
+  margin: 8% auto;
+}
+.navbar-container .logo img {
+  width: 150px;
+  overflow: hidden;
+}
+.navbar-container .logo .logo-cutoff {
+  width: 70px;
+}
+.navbar-container .links {
+  margin: 20% 0 0 10%;
+  width: 95%;
+  position: relative;
+}
+.navbar-container .links .link {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #979797;
+  position: relative;
+  width: 85%;
+  opacity: 1;
+  transition: 0.4s ease-in-out;
+}
+.navbar-container .links .link span {
+  margin: 10px 5px 5px;
+}
+.navbar-container .links .link h3 {
+  margin-left: 20px;
+  padding-bottom: 1.5px;
+  opacity: 1;
+}
+.navbar-container .links .link .alerts-number {
+  position: absolute;
+  right: 10px;
+  background-color: #4c78bb;
+  color: lightgray;
+  width: 35px;
+  height: 55%;
+  border-radius: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  margin: 0;
+}
+.navbar-container .links .link .hidden {
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.navbar-container .links .link:hover {
+  cursor: pointer;
+  background-color: #21529c;
+  transition: 0.4s ease-in-out;
+  border-radius: 15px;
+  color: white;
+  padding: 0 0 0 5%;
+  margin: 0;
+}
+.navbar-container .membership {
+  width: 70%;
+  height: 30%;
+  background-color: #265191;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 30% 0 75%;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  border-radius: 15px;
+}
+.navbar-container .membership button {
+  position: absolute;
+  bottom: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #24b8e9;
+  color: white;
+  height: 40px;
+  width: 90%;
+}
+.navbar-container .membership button:hover {
+  cursor: pointer;
+  background-color: #28a7d1;
+}
+.navbar-container .collapse-button {
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #d1d1d1;
+  position: absolute;
+  bottom: 40px;
+  left: 30%;
+}
+.navbar-container .collapse-button span {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  margin-bottom: 2px;
+}
+.navbar-container .collapse-button:hover {
+  cursor: pointer;
+  color: #e4e4e4;
+  transition: 0s;
+}
+.collapsed {
+  margin: 0;
+  width: 5%;
+  height: 100vh;
+  background-color: #2727b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  transition: 0.5s ease-in-out;
+  overflow: hidden;
+}
+.collapsed .logo img {
+  transform: scale(0.6);
+}
+.collapsed .links {
+  margin-left: 45%;
+}
+.collapsed .collapse-button {
+  left: 38%;
+}
+.hidden {
+  opacity: 0 !important;
+  transition: 0.3s ease-in-out;
+}

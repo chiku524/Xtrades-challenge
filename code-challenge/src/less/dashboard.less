@@ -1,0 +1,599 @@
+.dashboard-container {
+    height: 100%;
+    padding-top: 20px;
+    width: 85%;
+    font-size: 30px;
+    transition: .5s ease-in-out;
+    overflow-y: scroll;
+    color:rgb(87, 87, 86);
+    background-color: rgb(252, 252, 252);
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 1%;
+        padding-bottom: 2%;
+        border-bottom: 1px solid silver;
+        width: 100%;
+        height: 4%;
+        transition: .5s ease-in-out;
+
+        h4 {
+            margin: 0px 10% 0px 5%;
+            transition: .5s ease-in-out;
+        }
+
+        .searchbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 500px;
+            margin-right: 3%;
+    
+            .search-icon {
+                position: absolute;
+                left: 10px;
+                color: grey;
+            }
+    
+            .search {
+                width: 100%;
+                height: 45px;
+                background-color: rgb(236, 236, 236);
+                border: none;
+                border-radius: 10px;
+                padding-left: 10%;
+            }
+            // .search::placeholder {
+            //     padding-left: 35px;
+            // }
+            .search::-webkit-search-cancel-button {
+                padding-right: 3%;
+                transform: scale(1.2);
+            }
+        }
+
+        .referrals {
+            margin-left: 13%;
+
+            .referrals-button {
+                width: 150px;
+                height: 45px;
+                border-radius: 10px;
+                border: none;
+                background-color: rgb(36, 184, 233);
+                color: rgb(243, 243, 243);
+            }
+            .referrals-button:hover {
+                cursor: pointer;
+                background-color: rgb(35, 172, 218);
+                color: white;
+            }
+        }
+
+        .nav-icons {
+            margin-left: 1%;
+            width: 12%;
+            display: flex;
+            justify-content: space-evenly;
+
+            span:hover {
+                color:rgb(61, 63, 65);
+                cursor: pointer;
+            }
+        }
+
+        .profile {
+            transform: scale(1.8);
+            margin-left: 1%;
+        }
+        .profile:hover {
+            color:rgb(61, 63, 65);
+            cursor: pointer;
+        }
+    }
+
+    .trending-tickers {
+        width: 100%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .section-header {
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 15px;
+            margin: 2% 0 1%;
+
+            h4 {
+                font-size: 20px;
+            }
+        }
+        
+        .tickers {
+            width: 90%;
+            height: 100%;
+            background: linear-gradient(to bottom, #F5F8FB, #d4d7da, #F5F8FB);
+            display: flex;
+            justify-content: center;
+            position: relative;
+            border-radius: 8px;
+            overflow-x: auto scroll;
+
+            .fade {
+                opacity: .6;
+                z-index: 1;
+                height: 100%;
+                width: 5%;
+                position: absolute;
+            }
+            .start {
+                left: 0;
+                background-image : linear-gradient(to left, 
+                    rgba(255,255,255, 0), 
+                    rgba(255,255,255, 1) 100%);
+            }
+            .end {
+                right: 0;
+                background-image : linear-gradient(to right, 
+                    rgba(255,255,255, 0), 
+                    rgba(255,255,255, 1) 100%);
+            }
+
+            .tickers-content {
+                overflow-x: auto;
+                overflow-y: none;
+                cursor: grab;
+                width: 100%;
+                height: 98%;
+                overflow-y: hidden;
+
+                .content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 100%;
+                }
+
+                .ticker-card {
+                    min-width: 250px;
+                    height: 200px;
+                    background-color: rgba(255, 255, 255, 0.897);
+                    display: flex;
+                    flex-direction: column;
+                    margin: 20px 20px;
+                    border-radius: 15px;
+                    box-shadow: 1px 1px 4px rgb(139, 139, 139);
+    
+                    .stock-details {
+                        width: 100%;
+                        min-height: 60px;
+                        max-height: 60px;
+                        display: flex;
+                        flex-direction: row;
+                        font-size: 16px;
+                        align-items: center;
+                        position: relative;
+    
+                        .ticker-logo {
+                            max-width: 60px;
+                            max-height: 60px;
+                            mix-blend-mode: multiply;
+                        }
+    
+                        .stock-name {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            margin-left: 2%;
+    
+                            .stock-symbol {
+                                font-weight: bold;
+                            }
+                        }
+    
+                        .options-menu {
+                            position: absolute;
+                            top: 10px;
+                            right: 20px;
+                        }
+                        .options-menu:hover {
+                            cursor: pointer;
+                        }
+                    }
+    
+                    .chart {
+                        width: 100%;
+                        max-height: 45%;
+    
+                        img {
+                            min-height: 100%;
+                            max-height: 100%;
+                        }
+                    }
+    
+                    .alerts-prediction {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        position: relative;
+                        height: 100%;
+    
+                        .alert-count {
+                            font-size: 15px;
+                            font-weight: bold;
+                            margin-left: 10%;
+                            color:rgb(74, 76, 78);
+                        }
+    
+                        .prediction {
+                            font-size: 13px;
+                            font-weight: none;
+                            margin-right: 10%;
+                        }
+                    }
+                }
+            }
+        }
+        .tickers-content::-webkit-scrollbar {
+            background: none;
+            height: 5px;
+            border-radius: 15px;
+        }
+        .tickers-content::-webkit-scrollbar-button {
+            display: none;
+            border-radius: 15px;
+        }
+        .tickers-content::-webkit-scrollbar-track {
+            background-color: lightgrey;
+            border-radius: 15px;
+        }
+        .tickers-content::-webkit-scrollbar-track-piece {
+            color: lightgrey;
+            border-radius: 15px;
+        }
+        .tickers-content::-webkit-scrollbar-thumb {
+            background-color: grey;
+            border-radius: 15px;
+        }
+    }
+
+    .recent-alerts {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 4%;
+        margin-bottom: 5%;
+
+        .recent-alerts-header {
+            display: flex;
+            flex-direction: row;
+            width: 90%;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .title {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .categories {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                width: 25%;
+                background-color:rgb(236, 236, 236);
+                border-radius: 5px;
+                margin-top: 1%;
+                margin-bottom: 2%;
+                height: 40px;
+                justify-content: space-evenly;
+                
+                .category {
+                    height: 85%;
+                    width: 33.3%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 15px;
+                    color:rgb(132, 134, 136);
+                }
+                .category:hover {
+                    cursor: pointer;
+                    background-color:rgb(167, 204, 240);
+                    border-radius: 5px;
+                    color: black;
+                    z-index: 1;
+                }
+                
+                .left {
+                    border-right: 1px solid rgb(223, 221, 221);
+                }
+                .right {
+                    border-left: 1px solid rgb(223, 221, 221);
+                }
+
+                .faded {
+                    opacity: .7;
+                }
+                .chosen {
+                    width: 34%;
+                    height: 100%;
+                    border-radius: 5px;
+                    color: black;
+                    background-color:rgb(167, 204, 240);
+                }
+            }
+
+            .descriptions-bar {
+                width: 100%;
+                height: 50px;
+                border-radius: 15px;
+                display: flex;
+                flex-direction: row;
+                font-size: 16px;
+                align-items: center;
+                background-color:rgb(240, 243, 247);
+
+                .desc {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                }
+
+                .trader {
+                    margin: 0 10.5% 0 2%;
+                }
+                .trade {
+                    margin-right: 13%;
+                }
+                .strategy {
+                    margin-right: 9%;
+                }
+                .open-close {
+                    margin-right: 6%;
+                }
+                .profit-loss {
+                    margin-right: 7%;
+                }
+                .actions {
+                    margin-left: 2%;
+                }
+            }
+        }
+
+        .section {
+            width: 90%;
+            margin-top: 1%;
+            font-size: 14px;
+            height: 800px;
+
+            .alert-container {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border: 1px solid rgb(240, 239, 238);
+                margin-bottom: 1%;
+                height: 8%;
+                border-radius: 5px;
+
+                .responsive-pic {
+                    margin-left: 2%;
+
+                    .picture {
+                        min-width: 50px;
+                        min-height: 50px;
+                        border-radius: 50%;
+                        background: rgb(236, 236, 236);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        box-shadow: 0 0 5px grey;
+    
+                        .profile-pic {
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+
+                .username-handle {
+                    margin-left: 1%;
+                    margin-right: 5.5%;
+                    text-align: left;
+
+                    .username {
+                        font-weight: bold;
+                        color: black;
+                    }
+                }
+
+                .trade-logo {
+                    img {
+                        max-width: 60px;
+                        min-width: 60px;
+                        max-height: 50px;
+                        min-height: 50px;
+                    }
+                }
+
+                .trade-details {
+                    text-align: left;
+
+                    .action {
+                        font-weight: bold;
+                    }
+                }
+
+                .strategy {
+                    margin-left: 3%;
+                    display: flex;
+                    flex-direction: row; 
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 16%;
+                    height: 70%;
+                    vertical-align: middle;
+
+                    div {
+                        border: 1px solid rgb(240, 239, 238);
+                        background-color: rgb(226, 224, 222);
+                        height: 50%;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        padding: 3% 6%;
+                        justify-content: center;
+                    }
+                }
+
+                .open-close {
+                    margin-left: 4.7%;
+                    text-align: left;
+                }
+
+                .profit-loss {
+                    margin-left: 7%;
+
+                    .stat-container {
+                        border: 1px solid rgb(236, 236, 236);
+                        border-radius: 8px;
+                        width: 80px;
+                        height: 40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: rgb(250, 250, 250);
+                    }
+                    .red {
+                        background-color: rgb(245, 78, 78);
+                    }
+                    .green {
+                        background-color: rgba(1, 179, 1, 0.548);
+                    }
+                }
+
+                .actions {
+                    margin-left: 3%;
+                    width: 20%;
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    span {
+                        display: flex;
+                        align-items: center;
+                        color: grey;
+                        z-index: 1;
+                    }
+                    span:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .alert-container:hover {
+                box-shadow: 0px 0px 3px rgb(67, 140, 235);
+                cursor: pointer;
+                transition: .1s ease;
+            }
+            .alert-container:nth-child(even) {
+                background-color:rgba(241, 242, 243, 0.8);
+            }
+            .alert-container:nth-child(odd) {
+                background-color:rgb(251, 252, 253);
+            }
+        }
+    }
+}
+
+.expand {
+    width: 95%;
+    transition: .5s ease-in-out;
+
+    .header {
+        transition: .5s ease-in-out;
+
+        h4 {
+            margin: 0px 15% 0px 5%;
+            transition: .5s ease-in-out;
+        }
+    }
+}
+
+/* Ripple effect */
+.ripple {
+    background-position: center;
+    transition: background 0.8s;
+}
+.ripple:hover {
+background: rgb(240, 239, 238) radial-gradient(circle, transparent 1%, rgb(230, 228, 226) 1%) center/15000%;
+}
+.ripple:active {
+background-color: rgb(216, 215, 213);
+background-size: 100%;
+transition: background 0s;
+}
+
+//sort by dropdown menus
+.filter-button {
+    height: 35px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    background-color:rgb(240, 239, 238);
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .filter {
+        color:rgb(164, 167, 170);
+        margin-left: 7px;
+        width: 90px;
+    }
+
+    .expand-icon {
+        color: rgb(164, 167, 170);
+        display: flex;
+        align-items: center;
+        transition: .2s ease-in-out;
+    }
+    .rotate {
+        transform: rotateX(180deg);
+        transition: .2s ease-in-out;
+    }
+}
+.filter-button:hover {
+    cursor: pointer;
+    background-color:rgb(226, 226, 226);
+}
+
+.menu {
+    background-color:rgb(255, 255, 255);
+    z-index: 3;
+    width: 200px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+}

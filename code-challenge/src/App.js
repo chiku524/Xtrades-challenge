@@ -1,24 +1,18 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Alerts from './components/Alerts';
 import './App.css';
+import { CollapsedContext } from './contexts/Collapsed';
+
 
 function App() {
+  const [collapsed, setCollapsed] = useState(false);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CollapsedContext.Provider value={[collapsed, setCollapsed]}>
+      <div className="App">
+        <Alerts />
+      </div>
+    </CollapsedContext.Provider>
   );
 }
 
