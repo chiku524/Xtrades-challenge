@@ -21,7 +21,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 
 //modal
-import MyModal from '../components/Modal';
+import MyModal from './Modal';
 
 //scroll package for the trending tickers
 import { ScrollBoost } from 'react-scrollbooster';
